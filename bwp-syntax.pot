@@ -1,0 +1,351 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BWP Syntax\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-04-04 11:35+0700\n"
+"PO-Revision-Date: 2011-04-04 11:35+0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: includes/class-bwp-framework.php:172
+#, php-format
+msgid "%s requires WordPress <strong>%s</strong> or higher and PHP <strong>%s</strong> or higher. The plugin will not function until you update your software. Please deactivate this plugin."
+msgstr ""
+
+#: includes/class-bwp-framework.php:181
+msgid "log"
+msgstr ""
+
+#: includes/class-bwp-framework.php:186
+msgid "You can buy me some coffees if you appreciate my work, thank you!"
+msgstr ""
+
+#: includes/class-bwp-framework.php:211
+#, php-format
+msgid "You are using version %s!"
+msgstr ""
+
+#: includes/class-bwp-framework.php:343
+msgid "Settings"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:79
+#: includes/class-bwp-syntax.php:166
+msgid "General Options"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:80
+#: includes/class-bwp-syntax.php:167
+msgid "Theme Options"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:164
+msgid "Better WordPress Syntax"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:166
+msgid "BWP Syntax General Options"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:167
+msgid "BWP Syntax Theme Options"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:180
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: includes/class-bwp-syntax.php:199
+msgid "Parse Options"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:200
+msgid "This plugin will parse"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:201
+msgid "Search and remove nested shortcodes?"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:202
+msgid "Parse code inside comments?"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:203
+msgid "Default lang if none specified"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:204
+msgid "Display Options"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:205
+msgid "Show line numbers?"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:206
+msgid "Hide the codeblock by default?"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:207
+msgid "Miscellaneous"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:208
+msgid "Load only on single pages?"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:209
+msgid "Give the author credits?"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:218
+#, php-format
+msgid "<em>Choose what type of code parsing methods you want. By default this plugin will not parse codes inside the famous shortcode <code>[code]</code>, you can ask the plugin to do so, but it is <strong>not recommended</strong>; Even if you choose to do so, the plugin will only parse for your post content, not comment text. The reasons are described in this <a href=\"%s#notes\" target=\"_blank\">note</a>.</em>"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:219
+msgid "<em>Other options that fit nowhere.</em>"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:220
+msgid "<em>Some general display options.</em>"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:224
+msgid "This plugin will only load if is_singular() returns true."
+msgstr ""
+
+#: includes/class-bwp-syntax.php:225
+msgid "Show the line number next to each line of code."
+msgstr ""
+
+#: includes/class-bwp-syntax.php:226
+msgid "Add <code>inline=\"yes\"</code> to the shortcode and this plugin will output codes inside <code>&lt;code&gt;</code> tag."
+msgstr ""
+
+#: includes/class-bwp-syntax.php:227
+msgid "codes inside <code>&lt;code&gt;</code> tags."
+msgstr ""
+
+#: includes/class-bwp-syntax.php:228
+msgid "<strong>Warning:</strong> This might cause performance issues if there are too many comments with codes inside. You can use a cache plugin to deal with such problem. This option might be improved in the future, though."
+msgstr ""
+
+#: includes/class-bwp-syntax.php:229
+msgid "A link to this plugin's official page will be visible to your visitors. The link is added next to the view source icon. Thank you!"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:230
+msgid "codes inside <code>&lt;pre&gt;</code> tags."
+msgstr ""
+
+#: includes/class-bwp-syntax.php:231
+msgid "codes inside <code>[code]</code> shortcodes."
+msgstr ""
+
+#: includes/class-bwp-syntax.php:232
+msgid "Outputs are hidden by default to decrease post's length. Visitors will then click on folded codeblocks to toggle."
+msgstr ""
+
+#: includes/class-bwp-syntax.php:233
+msgid "If you choose to parse both <code>&lt;pre&gt;</code> or <code>&lt;code&gt;</code> with <code>[code]</code>, you should enable this to avoid nesting problem, such as <code>&lt;pre&gt;[code][/code]&lt;/pre&gt;</code>. This might cause some extremely long codeblock to fail to load. Follow the link in the note above for more details."
+msgstr ""
+
+#: includes/class-bwp-syntax.php:241
+#: includes/class-bwp-syntax.php:390
+msgid "No syntax highlighting"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:259
+msgid "Show a vertical scrollbar when there are more than"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:260
+msgid "Each line will be"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:261
+msgid "Each tab will equal"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:262
+msgid "A code block will be"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:263
+msgid "Output a code block as"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:264
+msgid "Style a code block"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:265
+msgid "Style a code block using"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:266
+msgid "Show the toolbar"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:267
+msgid "Load CSS, JS only when needed?"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:268
+msgid "Preview your preference"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:269
+msgid "Type some codes here"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:270
+msgid "Choose a language"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:271
+msgid "Generate language-based css"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:272
+msgid "Type in your desired language"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:277
+msgid "This section allows you to preview how the codeblock will look. It might not be accurate since the styles of the admin page and your actual page differ but generally it should be the same. Note that this generates codeblock basing on your preference."
+msgstr ""
+
+#: includes/class-bwp-syntax.php:278
+#, php-format
+msgid "This section allows you to generate styles for custom languages. Note that if you choose to style globally or use inline styles, simply ignore this. Visit <a href=\"%s#notes\">here</a> for more details."
+msgstr ""
+
+#: includes/class-bwp-syntax.php:282
+msgid "This is only useful when you do not use any minify or cache plugin."
+msgstr ""
+
+#: includes/class-bwp-syntax.php:287
+msgid "Table"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:288
+msgid "Ordered List"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:291
+msgid "Inline styles"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:292
+msgid "CSS classes"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:295
+msgid "Based on the language"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:296
+msgid "Globally"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:299
+msgid "Overlay"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:300
+msgid "Before Codeblock"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:301
+msgid "After Codeblock"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:302
+msgid "Do not show"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:308
+msgid "lines of codes. Type 0 for no vertical bar."
+msgstr ""
+
+#: includes/class-bwp-syntax.php:309
+msgid "pxs high. This should be the line-height you define in CSS (plus any margin or padding)."
+msgstr ""
+
+#: includes/class-bwp-syntax.php:310
+msgid "spaces. This is used by the Ordered List output method."
+msgstr ""
+
+#: includes/class-bwp-syntax.php:311
+msgid "pxs wide. By default (0), the code block will stretch to its container. If you choose to output the code block as an Ordered List, this should be wider than 500 pixels."
+msgstr ""
+
+#: includes/class-bwp-syntax.php:312
+msgid "You need to specify the correct language name defined within GeSHi. Look for the language name inside geshi.php, near line 1442"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:320
+msgid "<em><strong>Note:</strong> \"Table\" means the output consists of a table with one row and two columns. The first column will hold line numbers while the second column will hold the code. \"Ordered List\" will generate each line of code in a list item. The advantage of this is you can have a different color for each line but in exchange for more complicated styling and some weird browser behaviours. I suggest using the preview feature below to experiment with each method. For more information, please consult the <a href=\"http://qbnz.com/highlighter/geshi-doc.html#line-numbers\" target=\"_blank\">GeSHi documentation</a>.</em>"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:321
+msgid "<em><strong>Note:</strong> If you choose to style globally, this plugin will style your codeblocks the same regardless of languages. Styling globally might save you some kbs if you need tons of languages for your blog. Also, if you choose to style based on languages and do not want to use CSS, you can use inline styles, which also saves you some kbs (only a simple CSS file is needed). It is recommended that, however, you use CSS classes.</em>"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:322
+msgid "<em><strong>Note:</strong> The toolbar consists of a view source icon and a credit link if enabled. The view source button allows visitors to copy preformatted code with tabs and spaces untouched.</em>"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:670
+msgid "View Source Code"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:672
+msgid "Better WordPress Syntax Plugin"
+msgstr ""
+
+#: includes/class-bwp-syntax.php:703
+msgid "Click to toggle codeblock"
+msgstr ""
+
+#: includes/bwp-buttons/bwp-syntax-window.php:5
+msgid "Sorry, but you do not have the permission to view this file."
+msgstr ""
+
+#: includes/bwp-buttons/bwp-syntax-window.php:139
+msgid "Code"
+msgstr ""
+
+#: includes/bwp-buttons/bwp-syntax-window.php:145
+msgid "Language"
+msgstr ""
+
+#: includes/bwp-buttons/bwp-syntax-window.php:169
+msgid "Type"
+msgstr ""
+
+#: includes/bwp-buttons/bwp-syntax-window.php:178
+msgid "Inline"
+msgstr ""
+
+#: includes/bwp-buttons/bwp-syntax-window.php:181
+msgid "Select an inline mode"
+msgstr ""
+
+#: includes/bwp-option-page/includes/class-bwp-option-page.php:74
+msgid "Plugin Configurations"
+msgstr ""
+
+#: includes/bwp-option-page/includes/class-bwp-option-page.php:391
+msgid "Save Changes"
+msgstr ""
+

@@ -1,0 +1,168 @@
+/** * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann * (http://qbnz.com/highlighter/ and http://geshi.org/) */ .php {font-family:monospace;} .php .imp {font-weight: bold; color: red;} .php .kw1 {color: #b1b100;} .php .kw2 {color: #000000; font-weight: bold;} .php .kw3 {color: #990000;} .php .kw4 {color: #009900; font-weight: bold;} .php .co1 {color: #666666; font-style: italic;} .php .co2 {color: #666666; font-style: italic;} .php .co3 {color: #0000cc; font-style: italic;} .php .co4 {color: #009933; font-style: italic;} .php .coMULTI {color: #666666; font-style: italic;} .php .es0 {color: #000099; font-weight: bold;} .php .es1 {color: #000099; font-weight: bold;} .php .es2 {color: #660099; font-weight: bold;} .php .es3 {color: #660099; font-weight: bold;} .php .es4 {color: #006699; font-weight: bold;} .php .es5 {color: #006699; font-weight: bold; font-style: italic;} .php .es6 {color: #009933; font-weight: bold;} .php .es_h {color: #000099; font-weight: bold;} .php .br0 {color: #009900;} .php .sy0 {color: #339933;} .php .sy1 {color: #000000; font-weight: bold;} .php .st0 {color: #0000ff;} .php .st_h {color: #0000ff;} .php .nu0 {color: #cc66cc;} .php .nu8 {color: #208080;} .php .nu12 {color: #208080;} .php .nu19 {color:#800080;} .php .me1 {color: #004000;} .php .me2 {color: #004000;} .php .re0 {color: #000088;} .php span.xtra { display:block; } /**  * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann  * (http://qbnz.com/highlighter/ and http://geshi.org/)  */ .java {font-family:monospace;} .java .imp {font-weight: bold; color: red;} .java .kw1 {color: #000000; font-weight: bold;} .java .kw2 {color: #000066; font-weight: bold;} .java .kw3 {color: #003399;} .java .kw4 {color: #000066; font-weight: bold;} .java .co1 {color: #666666; font-style: italic;} .java .co2 {color: #006699;} .java .co3 {color: #008000; font-style: italic; font-weight: bold;} .java .coMULTI {color: #666666; font-style: italic;} .java .es0 {color: #000099; font-weight: bold;} .java .br0 {color: #009900;} .java .sy0 {color: #339933;} .java .st0 {color: #0000ff;} .java .nu0 {color: #cc66cc;} .java .me1 {color: #006633;} .java .me2 {color: #006633;} .java span.xtra { display:block; } .javascript {font-family:monospace;} .javascript .imp {font-weight: bold; color: red;} .javascript .kw1 {color: #000066; font-weight: bold;} .javascript .kw2 {color: #003366; font-weight: bold;} .javascript .kw3 {color: #000066;} .javascript .co1 {color: #006600; font-style: italic;} .javascript .co2 {color: #009966; font-style: italic;} .javascript .coMULTI {color: #006600; font-style: italic;} .javascript .es0 {color: #000099; font-weight: bold;} .javascript .br0 {color: #009900;} .javascript .sy0 {color: #339933;} .javascript .st0 {color: #3366CC;} .javascript .nu0 {color: #CC0000;} .javascript .me1 {color: #660066;} .javascript span.xtra { display:block; } /** * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann * (http://qbnz.com/highlighter/ and http://geshi.org/) */ .html4strict {font-family:monospace;} .html4strict .imp {font-weight: bold; color: red;} .html4strict .kw2 {color: #000000; font-weight: bold;} .html4strict .kw3 {color: #000066;} .html4strict .es0 {color: #000099; font-weight: bold;} .html4strict .br0 {color: #66cc66;} .html4strict .sy0 {color: #66cc66;} .html4strict .st0 {color: #ff0000;} .html4strict .nu0 {color: #cc66cc;} .html4strict .sc-1 {color: #808080; font-style: italic;} .html4strict .sc0 {color: #00bbdd;} .html4strict .sc1 {color: #ddbb00;} .html4strict .sc2 {color: #009900;} .html4strict span.xtra { display:block; } /** * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann * (http://qbnz.com/highlighter/ and http://geshi.org/) */ .css {font-family:monospace;} .css .imp {font-weight: bold; color: red;} .css .kw1 {color: #000000; font-weight: bold;} .css .kw2 {color: #993333;} .css .co1 {color: #a1a100;} .css .co2 {color: #ff0000; font-style: italic;} .css .coMULTI {color: #808080; font-style: italic;} .css .es0 {color: #000099; font-weight: bold;} .css .br0 {color: #00AA00;} .css .sy0 {color: #00AA00;} .css .st0 {color: #ff0000;} .css .nu0 {color: #cc66cc;} .css .re0 {color: #cc00cc;} .css .re1 {color: #6666ff;} .css .re2 {color: #3333ff;} .css .re3 {color: #933;} .css span.xtra { display:block; } /**  * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann  * (http://qbnz.com/highlighter/ and http://geshi.org/) */ .python {font-family:monospace;} .python .imp {font-weight: bold; color: red;} .python .kw1 {color: #ff7700;font-weight:bold;} .python .kw2 {color: #008000;} .python .kw3 {color: #dc143c;} .python .kw4 {color: #0000cd;} .python .co1 {color: #808080; font-style: italic;} .python .coMULTI {color: #808080; font-style: italic;} .python .es0 {color: #000099; font-weight: bold;} .python .br0 {color: black;} .python .sy0 {color: #66cc66;} .python .st0 {color: #483d8b;} .python .nu0 {color: #ff4500;} .python .me1 {color: black;} .python span.xtra { display:block; } /**  * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann  * (http://qbnz.com/highlighter/ and http://geshi.org/)  */ .c {font-family:monospace;} .c .imp {font-weight: bold; color: red;} .c .kw1 {color: #b1b100;} .c .kw2 {color: #000000; font-weight: bold;} .c .kw3 {color: #000066;} .c .kw4 {color: #993333;} .c .co1 {color: #666666; font-style: italic;} .c .co2 {color: #339933;} .c .coMULTI {color: #808080; font-style: italic;} .c .es0 {color: #000099; font-weight: bold;} .c .es1 {color: #000099; font-weight: bold;} .c .es2 {color: #660099; font-weight: bold;} .c .es3 {color: #660099; font-weight: bold;} .c .es4 {color: #660099; font-weight: bold;} .c .es5 {color: #006699; font-weight: bold;} .c .br0 {color: #009900;} .c .sy0 {color: #339933;} .c .st0 {color: #ff0000;} .c .nu0 {color: #0000dd;} .c .nu6 {color: #208080;} .c .nu8 {color: #208080;} .c .nu12 {color: #208080;} .c .nu16 {color:#800080;} .c .nu17 {color:#800080;} .c .nu18 {color:#800080;} .c .nu19 {color:#800080;} .c .me1 {color: #202020;} .c .me2 {color: #202020;} .c span.xtra { display:block; } /**  * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann  * (http://qbnz.com/highlighter/ and http://geshi.org/)  */ .ruby {font-family:monospace;} .ruby .imp {font-weight: bold; color: red;} .ruby .kw1 {color:#9966CC; font-weight:bold;} .ruby .kw2 {color:#0000FF; font-weight:bold;} .ruby .kw3 {color:#CC0066; font-weight:bold;} .ruby .kw4 {color:#CC00FF; font-weight:bold;} .ruby .co1 {color:#008000; font-style:italic;} .ruby .co4 {color: #cc0000; font-style: italic;} .ruby .coMULTI {color:#000080; font-style:italic;} .ruby .es0 {color:#000099;} .ruby .br0 {color:#006600; font-weight:bold;} .ruby .sy0 {color:#006600; font-weight:bold;} .ruby .st0 {color:#996600;} .ruby .nu0 {color:#006666;} .ruby .me1 {color:#9900CC;} .ruby .re0 {color:#ff6633; font-weight:bold;} .ruby .re1 {color:#0066ff; font-weight:bold;} .ruby .re2 {color:#6666ff; font-weight:bold;} .ruby .re3 {color:#ff3333; font-weight:bold;} .ruby span.xtra { display:block; } /**  * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann  * (http://qbnz.com/highlighter/ and http://geshi.org/)  */ .vb {font-family:monospace;} .vb .imp {font-weight: bold; color: red;} .vb .kw1 {color: #F660AB; font-weight: bold;} .vb .kw2 {color: #E56717; font-weight: bold;} .vb .kw3 {color: #8D38C9; font-weight: bold;} .vb .kw4 {color: #151B8D; font-weight: bold;} .vb .kw5 {color: #00C2FF; font-weight: bold;} .vb .kw6 {color: #3EA99F; font-weight: bold;} .vb .co1 {color: #008000;} .vb .es0 {color: #800000; font-weight: bold;} .vb .st0 {color: #800000;} .vb span.xtra { display:block; } /**  * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann *(http://qbnz.com/highlighter/ and http://geshi.org/)  */ .perl {font-family:monospace;} .perl .imp {font-weight: bold; color: red;} .perl .kw1 {color: #b1b100;} .perl .kw2 {color: #000000; font-weight: bold;} .perl .kw3 {color: #000066;} .perl .co1 {color: #666666; font-style: italic;} .perl .co2 {color: #009966; font-style: italic;} .perl .co3 {color: #0000ff;} .perl .co4 {color: #cc0000; font-style: italic;} .perl .co5 {color: #0000ff;} .perl .coMULTI {color: #666666; font-style: italic;} .perl .es0 {color: #000099; font-weight: bold;} .perl .es_h {color: #000099; font-weight: bold;} .perl .br0 {color: #009900;} .perl .sy0 {color: #339933;} .perl .st0 {color: #ff0000;} .perl .st_h {color: #ff0000;} .perl .nu0 {color: #cc66cc;} .perl .me1 {color: #006600;} .perl .me2 {color: #006600;} .perl .re0 {color: #0000ff;} .perl .re4 {color: #009999;} .perl span.xtra { display:block; } /**  * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann  * (http://qbnz.com/highlighter/ and http://geshi.org/)  */ .xml  {font-family:monospace;} .xml .imp {font-weight: bold; color: red;} .xml .es0 {color: #000099; font-weight: bold;} .xml .br0 {color: #66cc66;} .xml .sy0 {color: #66cc66;} .xml .st0 {color: #ff0000;} .xml .sc-1 {color: #808080; font-style: italic;} .xml .sc0 {color: #00bbdd;} .xml .sc1 {color: #ddbb00;} .xml .sc2 {color: #339933;} .xml .sc3 {color: #009900;} .xml .re0 {color: #000066;} .xml .re1 {color: #000000; font-weight: bold;} .xml .re2 {color: #000000; font-weight: bold;} .xml span.xtra { display:block; }
+
+/* general */
+.bwp-syntax-block {
+	margin: 10px 0px;
+	position: relative;
+	color: #000000;
+	background-color: #ffffff;
+	font-size: 12px;
+	line-height: 1.4;
+	font-family: "Consolas","Bitstream Vera Sans Mono","Courier New",Courier;
+	/*ie fix*/ zoom: 1;
+}
+
+.bwp-syntax-has-border {
+	border: 1px solid #E0E0E0;
+}
+
+.bwp-syntax-block div.bwp-syntax-toolbar {
+	position: absolute;
+	top: 0px; right: 0px;
+	z-index: 10000;
+	margin: 0;
+}
+
+.bwp-syntax-block div.bwp-syntax-block-handle {
+	margin: 0 0 2px 3px;
+}
+
+.bwp-syntax-block-handle a {
+	background: url("../images/icon_toggle.png") no-repeat left center;
+	padding-left: 18px;
+}
+
+.bwp-syntax-block-handle a.toggled {
+	background-image: url("../images/icon_toggled.png");
+}
+
+.bwp-syntax-block div.bwp-syntax-wrapper {
+	width: 100%;
+	overflow: auto; 
+	/*overflow-y: hidden; -- use this to fix IE6 issue when you don't want any vertical scrollbar*/
+	position: relative;
+	margin: 0;
+	/*ie fix*/ zoom: 1;
+}
+
+.bwp-syntax-block div.bwp-syntax-source {
+	display: none;
+}
+
+.bwp-syntax-block div.bwp-syntax-control {
+	line-height: 15px;
+	margin: 0;
+}
+
+.bwp-syntax-inline {
+	font-size: 12px;
+	font-family: "Consolas","Bitstream Vera Sans Mono","Courier New",Courier;
+	background-color: #ffffff;
+	border: 1px solid #E0E0E0;
+}
+
+.bwp-syntax-hidden {
+	display: none;
+}
+
+.ln-xtra { font-weight: bold; }
+
+.bwp-syntax-source-switch, .bwp-syntax-copy-switch {
+	width: 16px;
+	height: 16px;
+	background: url("../images/icon_source.jpg") no-repeat center center;
+	display: inline-block;
+	margin-top: 1px; margin-right: 3px;
+	padding: 0;
+}
+
+.bwp-syntax-copy-switch {
+	background-image: url("../images/icon_info.jpg");
+}
+
+.bwp-syntax-inline .br0 {
+	/* fix for inline */
+	color: #009900;
+}
+
+/* Ordered List Styling */
+.bwp-syntax-wrapper ol, #comments .bwp-syntax-wrapper ol, #content .bwp-syntax-wrapper ol {
+	margin: 0 0 0 0px; padding: 0px;
+	list-style-type: decimal;
+}
+
+.bwp-syntax-wrapper li {
+	color: #afafaf;
+}
+
+.bwp-syntax-wrapper li, #comments .bwp-syntax-wrapper li, #content .bwp-syntax-wrapper li {
+	list-style-position: outside; 
+	margin: 0 0 0 45px; padding: 0px; 
+	border: none;
+	line-height: 1.4;
+	font-family: "Consolas","Bitstream Vera Sans Mono","Courier New",Courier;
+	white-space: nowrap;
+}
+
+.li1:after, .li2:after { content: "."; display: block; height: 0; font-size: 0; line-height: 0; clear: both; visibility: hidden; } .bwp-syntax-wrapper .li1, #comments .bwp-syntax-wrapper .li1 {background-color: #ffffff;} .bwp-syntax-wrapper .li2, #comments .bwp-syntax-wrapper .li2 {background-color: #f8f8f8;}
+
+.bwp-syntax-wrapper div, #content .bwp-syntax-wrapper div {
+	margin: 0px;
+	/*ie fix*/ zoom: 1;
+}
+
+.bwp-syntax-wrapper li div {
+	/*width: 91%; float: right;*/
+	border-left: 3px solid #cccccc;
+	padding: 0px 5px;
+	color: #000000;
+}
+
+.bwp-syntax-wrapper li.ln-xtra, #comments .bwp-syntax-wrapper li.ln-xtra {
+	color: #000000;
+	background-color: #E0E0E0;
+	font-weight: normal;
+}
+
+/* Table layout styling */
+.bwp-syntax-wrapper table, #content .bwp-syntax-wrapper table {
+	border-spacing: 0;
+	border: none;
+	margin: 0px; padding: 0px;	
+}
+
+.bwp-syntax-wrapper table td, .bwp-syntax-wrapper table td pre, #content .bwp-syntax-wrapper table td, #content .bwp-syntax-wrapper table td pre, .bwp-syntax-no-lines .de1, #content .bwp-syntax-no-lines .de1 {
+	border: none;
+	padding: 0px; margin: 0px 10px;
+	background-color: transparent;
+	line-height: 1.4;
+	/*white-space: pre-wrap; -- use this to wrap your code with table and no line number layout*/
+}
+
+.bwp-syntax-wrapper table td.ln, #content .bwp-syntax-wrapper table td.ln {
+	text-align: right;
+	background-color: #EEEEEE;
+	width: 41px;
+}
+
+.bwp-syntax-wrapper table td.de1, #content .bwp-syntax-wrapper table td.de1 {
+	background-color: #ffffff;
+	border-left: 1px solid #9F9F9F;	
+}
+
+.bwp-syntax-wrapper table td.de1 pre, #content .bwp-syntax-wrapper table td.de1 pre {
+	margin: 0px 5px;
+}
+
+.bwp-syntax-wrapper table td.de1 span.ln-xtra { 
+	background-color: #f2f2f2;
+	font-weight: normal;
+	display: block;
+}
+
+.bwp-syntax-wrapper table td.ln span.ln-xtra {display: block; color: #FF0000; background: none; /*ie fix*/ zoom: 1;}
+
+/* No line numbers*/
+.bwp-syntax-no-lines .de1, #content .bwp-syntax-no-lines .de1 {
+	margin: 0 0 0 5px;
+}

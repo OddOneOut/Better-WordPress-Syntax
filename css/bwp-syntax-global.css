@@ -1,0 +1,195 @@
+/* general */
+.bwp-syntax-block {
+	margin: 10px 0px;
+	position: relative;
+	color: #000000;
+	background-color: #ffffff;
+	font-size: 12px;
+	line-height: 1.4;
+	font-family: "Consolas","Bitstream Vera Sans Mono","Courier New",Courier;
+	/*ie fix*/ zoom: 1;
+}
+
+.bwp-syntax-has-border {
+	border: 1px solid #E0E0E0;
+}
+
+.bwp-syntax-block div.bwp-syntax-toolbar {
+	position: absolute;
+	top: 0px; right: 0px;
+	z-index: 10000;
+	margin: 0;
+}
+
+.bwp-syntax-block div.bwp-syntax-block-handle {
+	margin: 0 0 2px 3px;
+}
+
+.bwp-syntax-block-handle a {
+	background: url("../images/icon_toggle.png") no-repeat left center;
+	padding-left: 18px;
+}
+
+.bwp-syntax-block-handle a.toggled {
+	background-image: url("../images/icon_toggled.png");
+}
+
+.bwp-syntax-block div.bwp-syntax-wrapper {
+	width: 100%;
+	overflow: auto; 
+	/*overflow-y: hidden; -- use this to fix IE6 issue when you don't want any vertical scrollbar*/
+	position: relative;
+	margin: 0;
+	/*ie fix*/ zoom: 1;
+}
+
+.bwp-syntax-block div.bwp-syntax-source {
+	display: none;
+}
+
+.bwp-syntax-block div.bwp-syntax-control {
+	line-height: 15px;
+	margin: 0;
+}
+
+.bwp-syntax-inline {
+	font-size: 12px;
+	font-family: "Consolas","Bitstream Vera Sans Mono","Courier New",Courier;
+	background-color: #ffffff;
+	border: 1px solid #E0E0E0;
+}
+
+.bwp-syntax-hidden {
+	display: none;
+}
+
+.ln-xtra { font-weight: bold; }
+
+.bwp-syntax-source-switch, .bwp-syntax-copy-switch {
+	width: 16px;
+	height: 16px;
+	background: url("../images/icon_source.jpg") no-repeat center center;
+	display: inline-block;
+	margin-top: 1px; margin-right: 3px;
+	padding: 0;
+}
+
+.bwp-syntax-copy-switch {
+	background-image: url("../images/icon_info.jpg");
+}
+
+.bwp-syntax-inline .br0 {
+	/* fix for inline */
+	color: #009900;
+}
+
+/* Ordered List Styling */
+.bwp-syntax-wrapper ol, #comments .bwp-syntax-wrapper ol, #content .bwp-syntax-wrapper ol {
+	margin: 0 0 0 0px; padding: 0px;
+	list-style-type: decimal;
+}
+
+.bwp-syntax-wrapper li {
+	color: #afafaf;
+}
+
+.bwp-syntax-wrapper li, #comments .bwp-syntax-wrapper li, #content .bwp-syntax-wrapper li {
+	list-style-position: outside; 
+	margin: 0 0 0 45px; padding: 0px; 
+	border: none;
+	line-height: 1.4;
+	font-family: "Consolas","Bitstream Vera Sans Mono","Courier New",Courier;
+	white-space: nowrap;
+}
+
+.li1:after, .li2:after { content: "."; display: block; height: 0; font-size: 0; line-height: 0; clear: both; visibility: hidden; } .bwp-syntax-wrapper .li1, #comments .bwp-syntax-wrapper .li1 {background-color: #ffffff;} .bwp-syntax-wrapper .li2, #comments .bwp-syntax-wrapper .li2 {background-color: #f8f8f8;}
+
+.bwp-syntax-wrapper div, #content .bwp-syntax-wrapper div {
+	margin: 0px;
+	/*ie fix*/ zoom: 1;
+}
+
+.bwp-syntax-wrapper li div {
+	/*width: 91%; float: right;*/
+	border-left: 3px solid #cccccc;
+	padding: 0px 5px;
+	color: #000000;
+}
+
+.bwp-syntax-wrapper li.ln-xtra, #comments .bwp-syntax-wrapper li.ln-xtra {
+	color: #000000;
+	background-color: #E0E0E0;
+	font-weight: normal;
+}
+
+/* Table layout styling */
+.bwp-syntax-wrapper table, #content .bwp-syntax-wrapper table {
+	border-spacing: 0;
+	border: none;
+	margin: 0px; padding: 0px;	
+}
+
+.bwp-syntax-wrapper table td, .bwp-syntax-wrapper table td pre, #content .bwp-syntax-wrapper table td, #content .bwp-syntax-wrapper table td pre, .bwp-syntax-no-lines .de1, #content .bwp-syntax-no-lines .de1 {
+	border: none;
+	padding: 0px; margin: 0px 10px;
+	background-color: transparent;
+	line-height: 1.4;
+	/*white-space: pre-wrap; -- use this to wrap your code with table and no line number layout*/
+}
+
+.bwp-syntax-wrapper table td.ln, #content .bwp-syntax-wrapper table td.ln {
+	text-align: right;
+	background-color: #EEEEEE;
+	width: 41px;
+}
+
+.bwp-syntax-wrapper table td.de1, #content .bwp-syntax-wrapper table td.de1 {
+	background-color: #ffffff;
+	border-left: 1px solid #9F9F9F;	
+}
+
+.bwp-syntax-wrapper table td.de1 pre, #content .bwp-syntax-wrapper table td.de1 pre {
+	margin: 0px 5px;
+}
+
+.bwp-syntax-wrapper table td.de1 span.ln-xtra { 
+	background-color: #f2f2f2;
+	font-weight: normal;
+	display: block;
+}
+
+.bwp-syntax-wrapper table td.ln span.ln-xtra {display: block; color: #FF0000; background: none; /*ie fix*/ zoom: 1;}
+
+/* No line numbers*/
+.bwp-syntax-no-lines .de1, #content .bwp-syntax-no-lines .de1 {
+	margin: 0 0 0 5px;
+}
+}
+
+/* Borrowed from Codecolorer Plugin */
+.bwp-syntax-wrapper .co0, .bwp-syntax-wrapper .co1, .bwp-syntax-wrapper .co2, .bwp-syntax-wrapper .co3, .bwp-syntax-wrapper .co4, .bwp-syntax-wrapper .coMULTI,
+	code.bwp-syntax-wrapper .co0, code.bwp-syntax-wrapper .co1, code.bwp-syntax-wrapper .co2, code.bwp-syntax-wrapper .co3, code.bwp-syntax-wrapper .co4, code.bwp-syntax-wrapper .coMULTI
+	{ color: #5A525F; font-style: italic; }
+.bwp-syntax-wrapper .nu0, .bwp-syntax-wrapper .re3,
+	code.bwp-syntax-wrapper .nu0, code.bwp-syntax-wrapper .re3
+	{ color: #811F24; }
+.bwp-syntax-wrapper .st0, .bwp-syntax-wrapper .st_h, .bwp-syntax-wrapper .es0, .bwp-syntax-wrapper .es1,
+	code.bwp-syntax-wrapper .st0, code.bwp-syntax-wrapper .st_h, code.bwp-syntax-wrapper .es0, code.bwp-syntax-wrapper .es1
+	{ color: #0B6125; }
+.bwp-syntax-wrapper .me1, .bwp-syntax-wrapper .me2,
+	code.bwp-syntax-wrapper .me1, code.bwp-syntax-wrapper .me2
+	{ color: #BF4F24; }
+.bwp-syntax-wrapper .kw1, .bwp-syntax-wrapper .kw2, .bwp-syntax-wrapper .sy1,
+	code.bwp-syntax-wrapper .kw1, code.bwp-syntax-wrapper .kw2, code.bwp-syntax-wrapper .sy1
+	{ color: #794938; }
+.bwp-syntax-wrapper .kw3, .bwp-syntax-wrapper .kw4, .bwp-syntax-wrapper .kw5, .bwp-syntax-wrapper .re2,
+	code.bwp-syntax-wrapper .kw3, code.bwp-syntax-wrapper .kw4, code.bwp-syntax-wrapper .kw5, code.bwp-syntax-wrapper .re2
+	{ color: #A71D5D; }
+.bwp-syntax-wrapper .re0, .bwp-syntax-wrapper .re1,
+	code.bwp-syntax-wrapper .re0, code.bwp-syntax-wrapper .re1
+	{ color: #234A97; }
+.bwp-syntax-wrapper .br0, .bwp-syntax-wrapper .sy0,
+	code.bwp-syntax-wrapper .br0, code.bwp-syntax-wrapper .sy0
+	{ color: #080808; }
+.bwp-syntax-wrapper .xml .re1 { color: #A71D5D; }
+.bwp-syntax-wrapper .xml .re0 { color: #811F24; }
