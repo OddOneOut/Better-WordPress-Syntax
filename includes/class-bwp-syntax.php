@@ -466,7 +466,7 @@ if (!empty($page))
 	 */
 	function add_editor_plugin($plugin_array)
 	{
-		$plugin_array['BWPSyntax'] = plugins_url('bwp-syntax', dirname($this->plugin_file)) . '/includes/bwp-buttons/editor_plugin.js';
+		$plugin_array['BWPSyntax'] = plugins_url('better-wordpress-syntax-based-on-geshi', dirname($this->plugin_file)) . '/includes/bwp-buttons/editor_plugin.js';
 		return $plugin_array;
 	}
 

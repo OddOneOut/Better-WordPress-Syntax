@@ -1,10 +1,10 @@
-=== Better WordPress Syntax ===
+=== Better WordPress Syntax Highlighter ===
 Contributors: OddOneOut
 Donate link: http://betterwp.net/wordpress-plugins/bwp-syntax/
 Tags: geshi, syntax highlighting, code highlighting, highlighting
 Requires at least: 2.8
 Tested up to: 3.1.1
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 
 This plugin allows you to highlight code syntax in your posts. There are plenty of options to choose.
 
@@ -51,6 +51,9 @@ Visit [Plugin's Official Page](http://betterwp.net/wordpress-plugins/bwp-syntax/
 3. Editor button to highlight a block of text
 
 == Changelog ==
+
+= 1.0.2 =
+* Fixed a critical bug with the editor button (this is due to WordPress's naming mechanism when submitting plugin).
 
 = 1.0.1 =
 * Fixed a minor Multi-site issue.
