@@ -41,7 +41,7 @@ class BWP_SYNTAX extends BWP_FRAMEWORK {
 	 *
 	 * @param	array	$args	The alias array, you can filter this using WordPress add_filter function to define your own.
 	 */	
-	function __construct($args = array(), $version = '1.0.3')
+	function __construct($args = array(), $version = '1.0.4')
 	{
 		// Plugin's title
 		$this->plugin_title = 'BetterWP Syntax';
@@ -563,7 +563,8 @@ if (!empty($page))
 			$content = trim($content, "\r\n\0");
 		}
 		// Decode content, for users using the visual editors
-		$content = htmlspecialchars_decode($content);
+		/*$content = htmlspecialchars_decode($content);*/
+		$content = html_entity_decode($content); // will improve in 1.1.0
 
 		// if content is empty, no need to proceed
 		if (empty($content))

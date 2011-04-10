@@ -4,7 +4,7 @@ Donate link: http://betterwp.net/wordpress-plugins/bwp-syntax/
 Tags: geshi, syntax highlighting, code highlighting, highlighting
 Requires at least: 2.8
 Tested up to: 3.1.1
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 
 This plugin allows you to highlight code syntax in your posts. There are plenty of options to choose.
 
@@ -55,6 +55,9 @@ Visit [Plugin's Official Page](http://betterwp.net/wordpress-plugins/bwp-syntax/
 3. Editor button to highlight a block of text
 
 == Changelog ==
+
+= 1.0.4
+* Added a temporary fix for some HTML entities' issues. Thanks to [tiaurus](http://n-wp.ru/)!
 
 = 1.0.3 =
 * Added 6 more default languages, as requested by users, including: Bash Script (bash), CSharp (csharp), Actionscript (as), Actionscript3 (as3), Apache (apache), MySQL (mysql).
