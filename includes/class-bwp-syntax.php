@@ -41,7 +41,7 @@ class BWP_SYNTAX extends BWP_FRAMEWORK {
 	 *
 	 * @param	array	$args	The alias array, you can filter this using WordPress add_filter function to define your own.
 	 */	
-	function __construct($args = array(), $version = '1.0.1')
+	function __construct($args = array(), $version = '1.0.3')
 	{
 		// Plugin's title
 		$this->plugin_title = 'BetterWP Syntax';
@@ -91,7 +91,13 @@ class BWP_SYNTAX extends BWP_FRAMEWORK {
 			'ruby'	=> 'ruby',
 			'c'		=> 'c',
 			'vb'	=> 'vb',
-			'xml'	=> 'xml'
+			'xml'	=> 'xml',
+			'bash'	=> 'bash',
+			'csharp'=> 'csharp',
+			'apache'=> 'apache',
+			'as'	=> 'actionscript',
+			'as3'	=> 'actionscript3',
+			'mysql' => 'mysql'
 		);
 
 		$this->shortcode_tag = apply_filters('bwp_syntax_shortcode_tag', 'code');
@@ -335,6 +341,7 @@ if (!empty($page))
 			// preview a snipplet of code
 			if (!empty($_POST['preview_code']) && !empty($_POST['select_preview_lang']))
 			{
+				$_POST['preview_code'] = str_replace(array('<?', '?>'), array('&lt;?', '?&gt;'), $_POST['preview_code']);
 				$form['container']['select_preview_lang'] = '<h3>Your preview code:</h3>' . $this->bwp_geshi_parser(array('lang' => stripslashes($_POST['select_preview_lang'])), wp_kses(stripslashes($_POST['preview_code']), $allowedtags));
 			}
 			// generate a style for a specific language
@@ -343,7 +350,7 @@ if (!empty($page))
 				$geshi = $this->load_geshi();
 				$geshi->set_language($_POST['input_language']);
 				$styles = str_replace("\n", " ", $geshi->get_stylesheet());
-				$form['container']['input_language'] = '<h3>Your generated styles:</h3>' . $this->bwp_geshi_parser(array('lang' => 'css'), $styles);
+				$form['container']['input_language'] = '<h3>Your generated styles:</h3>' . $this->bwp_geshi_parser(array('lang' => 'css'), $styles, true);
 			}
 		}
 
@@ -466,7 +473,7 @@ if (!empty($page))
 	 */
 	function add_editor_plugin($plugin_array)
 	{
-		$plugin_array['BWPSyntax'] = plugins_url('better-wordpress-syntax-based-on-geshi', dirname($this->plugin_file)) . '/includes/bwp-buttons/editor_plugin.js';
+		$plugin_array['BWPSyntax'] = plugin_dir_url($this->plugin_file) . 'includes/bwp-buttons/editor_plugin.js';
 		return $plugin_array;
 	}
 
@@ -517,7 +524,7 @@ if (!empty($page))
 	/**
 	 * The shortcode callback
 	 */
-	function bwp_geshi_parser($atts, $content = '')
+	function bwp_geshi_parser($atts, $content = '', $preview = false)
 	{
 		global $comment;
 
@@ -692,13 +699,22 @@ if (!empty($page))
 		}
 
 		$block_class = '';
+		$preview_style = '';
 		if ('yes' == $toggle)
 		{
 			$styling_class .= ' bwp-syntax-hidden';
 			$block_class .= ' bwp-syntax-has-border';
-		}				
+		}
 			
 		$output = '';
+		// previewing CSS, wrap the code
+		if (true == $preview)
+		{
+			$preview_style .= '<style type="text/css">' . "\n";
+			$preview_style .= '.bwp-syntax-wrapper li {white-space: normal;}'. "\n";
+			$preview_style .= '</style>';
+			$output = $preview_style;
+		}
 		$output .= "\n<div class=\"bwp-syntax-block clearfix$block_class\">";
 		$output .= ('yes' == $toggle) ? '<div class="bwp-syntax-block-handle" style="height: ' . $line_height . 'px;"><a href="javascript:;" title="' . __('Click to toggle codeblock', 'bwp-syntax') . '">' . __('Click to toggle codeblock', 'bwp-syntax') . '</a></div>': '';
 		$output .= ('overlay' == $this->options['select_source_position'] || 'hide' == $this->options['select_source_position']) ? "\n" . '<div class="bwp-syntax-toolbar"' . $toolbar_style . '>' . $toolbar . '</div>' : '';
