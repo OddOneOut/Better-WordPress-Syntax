@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2011 Khang Minh <betterwp.net>
+ * Copyright (c) 2013 Khang Minh <betterwp.net>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,7 +17,7 @@
  */
  
 if (!class_exists('BWP_FRAMEWORK'))
-	require_once('class-bwp-framework.php');
+	require_once(dirname(__FILE__) . '/class-bwp-framework.php');
 
 class BWP_SYNTAX extends BWP_FRAMEWORK {
 
@@ -41,7 +41,7 @@ class BWP_SYNTAX extends BWP_FRAMEWORK {
 	 *
 	 * @param	array	$args	The alias array, you can filter this using WordPress add_filter function to define your own.
 	 */	
-	function __construct($args = array(), $version = '1.0.4')
+	function __construct($args = array(), $version = '1.0.6')
 	{
 		// Plugin's title
 		$this->plugin_title = 'BetterWP Syntax';
@@ -53,7 +53,7 @@ class BWP_SYNTAX extends BWP_FRAMEWORK {
 
 		// The default options
 		$options = array(
-			'only_singular' => 'yes',
+			'only_singular' => '',
 			'enable_pre'	=> 'yes',
 			'enable_shortcode' => '',
 			'enable_lines'	=> 'yes',
@@ -109,6 +109,7 @@ class BWP_SYNTAX extends BWP_FRAMEWORK {
 			$this->add_editor_button();
 			$this->add_shortcode();			
 		}
+
 	}
 
 	function add_hooks()
@@ -513,7 +514,7 @@ if (!empty($page))
 		// Include GeSHi, check if any other plugin also requires this library
 		// Since GeSHi is a quite large library, only include this when something needs parsing				
 		if (!class_exists('GeSHi'))
-			include_once('geshi/geshi.php');
+			include_once(dirname(__FILE__) . '/geshi/geshi.php');
 
 		if (!isset($this->geshi))
 			$this->geshi = new GeSHi();					
@@ -564,7 +565,7 @@ if (!empty($page))
 		}
 		// Decode content, for users using the visual editors
 		/*$content = htmlspecialchars_decode($content);*/
-		$content = html_entity_decode($content); // will improve in 1.1.0
+		$content = html_entity_decode($content, ENT_COMPAT, 'UTF-8'); // will improve in 1.1.0
 
 		// if content is empty, no need to proceed
 		if (empty($content))
@@ -669,8 +670,8 @@ if (!empty($page))
 		$line_height = (empty($this->options['input_line_height'])) ? 17 : $this->options['input_line_height']; 
 		$height 	= (empty($this->options['input_lines'])) ? 0 : $this->options['input_lines'];
 		$height 	= ($height <= $num_lines && !empty($height)) ? ' height: ' . $height * $line_height . 'px;' : '';
-		$width 		= (empty($this->options['input_width'])) ? '' : 'width: ' . $this->options['input_width'] . 'px;';
-		$inline_stlyle = ('' != $height . $width) ? 'style="' . $height . $width . '"' : '';
+		$width 		= (empty($this->options['input_width'])) ? '' : ' width: ' . $this->options['input_width'] . 'px;';
+		$inline_stlyle = ('' != $height . $width) ? ' style="' . $height . $width . '"' : '';
 		$toolbar_style = ('' != $height && 'yes' != $toggle) ? ' style="right: 15px;" ' : '';
 		
 		$styling_class = ' bwp-syntax-simple';

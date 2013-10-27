@@ -3,8 +3,8 @@ Contributors: OddOneOut
 Donate link: http://betterwp.net/wordpress-plugins/bwp-syntax/
 Tags: geshi, syntax highlighting, code highlighting, highlighting
 Requires at least: 2.8
-Tested up to: 3.1.1
-Stable tag: 1.0.4
+Tested up to: 3.7
+Stable tag: 1.0.6
 
 This plugin allows you to highlight code syntax in your posts. There are plenty of options to choose.
 
@@ -28,9 +28,17 @@ This plugin allows you to highlight code syntax in your posts. It is simple, lig
 * WordPress Multi-site compatible (not tested with WPMU)
 * And more...
 
+**Get in touch**
+
+* I'm available at [BetterWP.net](http://betterwp.net) and you can also follow me on [Twitter](http://twitter.com/0dd0ne0ut).
+* Check out [latest WordPress Tips and Ideas](http://feeds.feedburner.com/BetterWPnet) from BetterWP.net.
+
 **Languages**
 
-* This plugin is currently available only in English. Please [help translate](http://betterwp.net/wordpress-tips/create-pot-file-using-poedit/) it!
+* English (default)
+* Italian (it_IT) - Thanks to [Paolo Stivanin](http://www.polslinux.it)!
+
+Please [help translate](http://betterwp.net/wordpress-tips/create-pot-file-using-poedit/) this plugin!
 
 Visit [Plugin's Official Page](http://betterwp.net/wordpress-plugins/bwp-syntax/) for more information!
 
@@ -56,7 +64,19 @@ Visit [Plugin's Official Page](http://betterwp.net/wordpress-plugins/bwp-syntax/
 
 == Changelog ==
 
-= 1.0.4
+= 1.0.6 =
+* Marked as WordPress 3.7 compatible.
+* Added an Italian translation. Thanks to Paolo Stivanin!
+* Updated BWP Framework to fix a possible bug that caues BWP setting pages to go blank.
+* Updated GeSHi library to version 1.0.8.11.
+* Fixed a typo that causes an error with W3C validation.
+* **Good news**: ManageWP.com has become the official sponsor for BWP Syntax - [Read more](http://betterwp.net/319-better-wordpress-plugins-updates-2013/).
+
+= 1.0.5 =
+* Fixed a small issue regarding HTML entities. Thanks again to tiaurus for reporting the bug!
+* Fixed a possible bug of the editor button when `wp-config.php` file was moved one directory up.
+
+= 1.0.4 =
 * Added a temporary fix for some HTML entities' issues. Thanks to [tiaurus](http://n-wp.ru/)!
 
 = 1.0.3 =

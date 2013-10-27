@@ -1,0 +1,358 @@
+#
+# Paolo Stivanin <admin@polslinux.it>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: BWP Syntax\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-11-30 12:37+0100\n"
+"PO-Revision-Date: 2013-10-27 22:33+0700\n"
+"Last-Translator: \n"
+"Language-Team: Italiano <admin@polslinux.it>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Language: Italian\n"
+"X-Poedit-Country: ITALY\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: includes/class-bwp-syntax.php:79
+#: includes/class-bwp-syntax.php:172
+msgid "General Options"
+msgstr "Opzioni Generali"
+
+#: includes/class-bwp-syntax.php:80
+#: includes/class-bwp-syntax.php:173
+msgid "Theme Options"
+msgstr "Opzioni Tema"
+
+#: includes/class-bwp-syntax.php:170
+msgid "Better WordPress Syntax"
+msgstr "Better WordPress Syntax"
+
+#: includes/class-bwp-syntax.php:172
+msgid "BWP Syntax General Options"
+msgstr "Opzioni Generali BWP Syntax"
+
+#: includes/class-bwp-syntax.php:173
+msgid "BWP Syntax Theme Options"
+msgstr "Opzioni Tema BWP Syntax"
+
+#: includes/class-bwp-syntax.php:186
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Non hai permessi sufficienti per accedere a questa pagina."
+
+#: includes/class-bwp-syntax.php:205
+msgid "Parse Options"
+msgstr "Opzioni Analisi"
+
+#: includes/class-bwp-syntax.php:206
+msgid "This plugin will parse"
+msgstr "Questo plugin analizzerà"
+
+#: includes/class-bwp-syntax.php:207
+msgid "Search and remove nested shortcodes?"
+msgstr "Cercare e rimuovere gli shortcode nidificati?"
+
+#: includes/class-bwp-syntax.php:208
+msgid "Parse code inside comments?"
+msgstr "Analizzare il codice anche nei commenti?"
+
+#: includes/class-bwp-syntax.php:209
+msgid "Default lang if none specified"
+msgstr "Se nessun linguaggio viene specificato, di default si userà"
+
+#: includes/class-bwp-syntax.php:210
+msgid "Display Options"
+msgstr "Opzioni Visualizzazione"
+
+#: includes/class-bwp-syntax.php:211
+msgid "Show line numbers?"
+msgstr "Mostrare i numeri delle linee?"
+
+#: includes/class-bwp-syntax.php:212
+msgid "Hide the codeblock by default?"
+msgstr "Di default il codice va nascosto?"
+
+#: includes/class-bwp-syntax.php:213
+msgid "Miscellaneous"
+msgstr "Varie"
+
+#: includes/class-bwp-syntax.php:214
+msgid "Load only on single pages?"
+msgstr "Caricare solo in una singola pagina?"
+
+#: includes/class-bwp-syntax.php:215
+msgid "Give the author credits?"
+msgstr "Dare crediti all'autore?"
+
+#: includes/class-bwp-syntax.php:224
+#, php-format
+msgid "<em>Choose what type of code parsing methods you want. By default this plugin will not parse codes inside the famous shortcode <code>[code]</code>, you can ask the plugin to do so, but it is <strong>not recommended</strong>; Even if you choose to do so, the plugin will only parse for your post content, not comment text. The reasons are described in this <a href=\"%s#notes\" target=\"_blank\">note</a>.</em>"
+msgstr "<em>Scegliere il tipo di metodo di analisi del codice che si desidera usare. Per impostazione predefinita, questo plugin non analizzerà i codici all'interno del famoso shortcode <code>[code]</code>, è possibile impostare il plugin per fare questo ma <strong>non è raccomandato</strong>; Anche se si deciderà per questa opzione il plugin non analizzerà il codice all'interno dei commenti ma solo all'interno del post. Le ragioni sono descritte in queste <a href=\"%s#notes\" target=\"_blank\">note</a>.</em>"
+
+#: includes/class-bwp-syntax.php:225
+msgid "<em>Other options that fit nowhere.</em>"
+msgstr "<em>Altre opzioni che non si adattano da nessuna parte.</em>"
+
+#: includes/class-bwp-syntax.php:226
+msgid "<em>Some general display options.</em>"
+msgstr "<em>Alcune opzioni di visualizzazione.</em>"
+
+#: includes/class-bwp-syntax.php:230
+msgid "This plugin will only load if is_singular() returns true."
+msgstr "Questo plugin si caricherà solo se is_singular() ritorna true."
+
+#: includes/class-bwp-syntax.php:231
+msgid "Show the line number next to each line of code."
+msgstr "Mostrare il numero della linea accanto ad ogni linea di codice."
+
+#: includes/class-bwp-syntax.php:232
+msgid "Add <code>inline=\"yes\"</code> to the shortcode and this plugin will output codes inside <code>&lt;code&gt;</code> tag."
+msgstr "Aggiungere <code>inline=\"yes\"</code> al shortcode e questo plugin visualizzerà il codice all'interno del tag <code>&lt;code&gt;</code>."
+
+#: includes/class-bwp-syntax.php:233
+msgid "codes inside <code>&lt;code&gt;</code> tags."
+msgstr "codice all'intero del tag  <code>&lt;code&gt;</code>"
+
+#: includes/class-bwp-syntax.php:234
+msgid "<strong>Warning:</strong> This might cause performance issues if there are too many comments with codes inside. You can use a cache plugin to deal with such problem. This option might be improved in the future, though."
+msgstr "<strong>Attenzione:</strong> Questo potrebbe causare problemi prestazionali nel caso di molti commenti con codice al loro interno. È possibile usare un plugin che gestisce la cache per ovviare a questo problema. Questa opzione sarà migliorata in futuro...penso."
+
+#: includes/class-bwp-syntax.php:235
+msgid "A link to this plugin's official page will be visible to your visitors. The link is added next to the view source icon. Thank you!"
+msgstr "Un link alla pagina ufficiale di questo plugin sarà visibile ai tuoi visitatori. Il link sarà aggiunto vicino all'icona Visualizza Sorgente. Grazie!"
+
+#: includes/class-bwp-syntax.php:236
+msgid "codes inside <code>&lt;pre&gt;</code> tags."
+msgstr "codice all'interno del tag <code>&lt;pre&gt;</code>."
+
+#: includes/class-bwp-syntax.php:237
+msgid "codes inside <code>[code]</code> shortcodes."
+msgstr "codice all'interno del shortcode <code>[code]</code>"
+
+#: includes/class-bwp-syntax.php:238
+msgid "Outputs are hidden by default to decrease post's length. Visitors will then click on folded codeblocks to toggle."
+msgstr "Per diminuire la lunghezza del post l'output del codice è nascosto di default. I visitatori dovranno cliccare sul blocco di codice per visualizzarne il contenuto."
+
+#: includes/class-bwp-syntax.php:239
+msgid "If you choose to parse both <code>&lt;pre&gt;</code> or <code>&lt;code&gt;</code> with <code>[code]</code>, you should enable this to avoid nesting problem, such as <code>&lt;pre&gt;[code][/code]&lt;/pre&gt;</code>. This might cause some extremely long codeblock to fail to load. Follow the link in the note above for more details."
+msgstr "Se si sceglie di analizzare sia <code>&lt;pre&gt;</code> o <code>&lt;code&gt;</code> con il tag <code>[code]</code> si dovrebbe attivare questa opzione per evitare problemi di annidamento come <code>&lt;pre&gt;[code][/code]&lt;/pre&gt;</code><code>&lt;pre&gt;[code][/code]&lt;/pre&gt;</code>. Questo potrebbe causare il fallimento del caricamento di lunghi blocchi di codice. Seguire il link all'interno delle note qui sotto per maggiori dettagli."
+
+#: includes/class-bwp-syntax.php:247
+#: includes/class-bwp-syntax.php:397
+msgid "No syntax highlighting"
+msgstr "Nessun highlight della sintassi"
+
+#: includes/class-bwp-syntax.php:265
+msgid "Show a vertical scrollbar when there are more than"
+msgstr "Mostrare una scrollbar verticale quando ci sono più di"
+
+#: includes/class-bwp-syntax.php:266
+msgid "Each line will be"
+msgstr "Ogni linea sarà"
+
+#: includes/class-bwp-syntax.php:267
+msgid "Each tab will equal"
+msgstr "Ogni tab equivarrà"
+
+#: includes/class-bwp-syntax.php:268
+msgid "A code block will be"
+msgstr "Un blocco di codice sarà"
+
+#: includes/class-bwp-syntax.php:269
+msgid "Output a code block as"
+msgstr "Output del blocco di codice come"
+
+#: includes/class-bwp-syntax.php:270
+msgid "Style a code block"
+msgstr "Stile di un blocco di codice"
+
+#: includes/class-bwp-syntax.php:271
+msgid "Style a code block using"
+msgstr "Stile di un blocco di codice usando"
+
+#: includes/class-bwp-syntax.php:272
+msgid "Show the toolbar"
+msgstr "Mostrare la toolbar"
+
+#: includes/class-bwp-syntax.php:273
+msgid "Load CSS, JS only when needed?"
+msgstr "Caricare CSS e JS solo quando necessario?"
+
+#: includes/class-bwp-syntax.php:274
+msgid "Preview your preference"
+msgstr "Anteprima delle tue preferenze"
+
+#: includes/class-bwp-syntax.php:275
+msgid "Type some codes here"
+msgstr "Scrivi del codice qui"
+
+#: includes/class-bwp-syntax.php:276
+msgid "Choose a language"
+msgstr "Scegli un linguaggio"
+
+#: includes/class-bwp-syntax.php:277
+msgid "Generate language-based css"
+msgstr "Generare css basato sul linguaggio"
+
+#: includes/class-bwp-syntax.php:278
+msgid "Type in your desired language"
+msgstr "Scrivi il linguaggio desiderato"
+
+#: includes/class-bwp-syntax.php:283
+msgid "This section allows you to preview how the codeblock will look. It might not be accurate since the styles of the admin page and your actual page differ but generally it should be the same. Note that this generates codeblock basing on your preference."
+msgstr "Questa sezione ti permette di vedere un'anteprima di come il blocco di codice apparirà. Potrebbe non essere accurato dato che lo stile della pagina di amministrazione e della pagina attuale differiscono ma generalmente dovrebbero essere uguali. Nota che questo genera i blocchi di codice sulla base delle tue preferenze."
+
+#: includes/class-bwp-syntax.php:284
+#, php-format
+msgid "This section allows you to generate styles for custom languages. Note that if you choose to style globally or use inline styles, simply ignore this. Visit <a href=\"%s#notes\">here</a> for more details."
+msgstr "Questa sezione ti permette di generare degli stili personalizzati per i tuoi linguaggi. Nota che se scegli lo stile globale o usi gli stili di linea puoi ignorare questo. Visita  <a href=\"%s#notes\">QUI</a> per maggiori dettagli."
+
+#: includes/class-bwp-syntax.php:288
+msgid "This is only useful when you do not use any minify or cache plugin."
+msgstr "Questo è utile solo se non usi minify o il plugin per la cache"
+
+#: includes/class-bwp-syntax.php:293
+msgid "Table"
+msgstr "Tabella"
+
+#: includes/class-bwp-syntax.php:294
+msgid "Ordered List"
+msgstr "Lista Ordinata"
+
+#: includes/class-bwp-syntax.php:297
+msgid "Inline styles"
+msgstr "Stile in linea"
+
+#: includes/class-bwp-syntax.php:298
+msgid "CSS classes"
+msgstr "Classi CSS"
+
+#: includes/class-bwp-syntax.php:301
+msgid "Based on the language"
+msgstr "Basato sul linguaggio"
+
+#: includes/class-bwp-syntax.php:302
+msgid "Globally"
+msgstr "Globalmente"
+
+#: includes/class-bwp-syntax.php:305
+msgid "Overlay"
+msgstr "Coprire"
+
+#: includes/class-bwp-syntax.php:306
+msgid "Before Codeblock"
+msgstr "Prima Codeblock"
+
+#: includes/class-bwp-syntax.php:307
+msgid "After Codeblock"
+msgstr "Dopo Codeblock"
+
+#: includes/class-bwp-syntax.php:308
+msgid "Do not show"
+msgstr "Non mostrare"
+
+#: includes/class-bwp-syntax.php:314
+msgid "lines of codes. Type 0 for no vertical bar."
+msgstr "linee di codice. Scrivi 0 per non avere la barra verticale"
+
+#: includes/class-bwp-syntax.php:315
+msgid "pxs high. This should be the line-height you define in CSS (plus any margin or padding)."
+msgstr "pxs alto. Questo dovrebbe essere l'altezza della linea definita nel CSS (più un margine o padding)"
+
+#: includes/class-bwp-syntax.php:316
+msgid "spaces. This is used by the Ordered List output method."
+msgstr "spazi. È usato dal metodo Lista Ordinata."
+
+#: includes/class-bwp-syntax.php:317
+msgid "pxs wide. By default (0), the code block will stretch to its container. If you choose to output the code block as an Ordered List, this should be wider than 500 pixels."
+msgstr "pxs largo. Di default (0), il blocco di codice si estenderà nel suo contenitore. Se si sceglie che l'output del blocco di codice sia come una Lista Ordinata esso dovrebbe essere più largo di 400 pixels."
+
+#: includes/class-bwp-syntax.php:318
+msgid "You need to specify the correct language name defined within GeSHi. Look for the language name inside geshi.php, near line 1442"
+msgstr "Devi specificare il nome corretto del linguaggio definito assieme a GeSHi. Cerca il nome del linguaggio all'interno del file geshi.php alla linea 1442 (circa)"
+
+#: includes/class-bwp-syntax.php:326
+msgid "<em><strong>Note:</strong> \"Table\" means the output consists of a table with one row and two columns. The first column will hold line numbers while the second column will hold the code. \"Ordered List\" will generate each line of code in a list item. The advantage of this is you can have a different color for each line but in exchange for more complicated styling and some weird browser behaviours. I suggest using the preview feature below to experiment with each method. For more information, please consult the <a href=\"http://qbnz.com/highlighter/geshi-doc.html#line-numbers\" target=\"_blank\">GeSHi documentation</a>.</em>"
+msgstr "<em><strong>Nota:</strong> \"Tabella\" significa che l'output consiste in una tabella di una riga e due colonne. La prima colonna terrà i numeri di riga mentre la seconda terrà il codice. \"Lista Ordinata\" genererà ogni riga di codice in un elenco di elementi. Il vantaggio di questo metodo è che si possono associare colori diversi per ogni riga ma in cambio di stile più complesso e alcuni comportamenti strani del browser. Per maggiori informazioni consulare <a href=\"http://qbnz.com/highlighter/geshi-doc.html#line-numbers\" target=\"_blank\">GeSHi documentation</a>.</em>"
+
+#: includes/class-bwp-syntax.php:327
+msgid "<em><strong>Note:</strong> If you choose to style globally, this plugin will style your codeblocks the same regardless of languages. Styling globally might save you some kbs if you need tons of languages for your blog. Also, if you choose to style based on languages and do not want to use CSS, you can use inline styles, which also saves you some kbs (only a simple CSS file is needed). It is recommended that, however, you use CSS classes.</em>"
+msgstr "<em><strong>Nota:</strong> Se si sceglie lo stile globale questo plugin applicherà lo stile predefinito ai tuoi blocchi di codice incurante del tipo di linguaggio. Lo stile globale potrebbe salvarti dall'usare alcuni kbs se si utilizzano \"tonnellate\" di linguaggi per il proprio blog. Inoltre se si sceglie lo stile in base al linguaggio e non si vuole usare CSS è possibile usare gli stili in linea che, pure loro, ti salveranno alcuni kbs. Questo è raccomandato in caso si usino le classi di CSS."
+
+#: includes/class-bwp-syntax.php:328
+msgid "<em><strong>Note:</strong> The toolbar consists of a view source icon and a credit link if enabled. The view source button allows visitors to copy preformatted code with tabs and spaces untouched.</em>"
+msgstr "<em><strong>Nota:</strong> La toolbar consiste in un'icona per visualizzare il codice sorgente e, se abilitato, un link per il credito. Il pulsante per visualizzare il codice sorgente permette ai visitatori di copiare il testo preformattato con tabs e spazi intoccati.</em>"
+
+#: includes/class-bwp-syntax.php:678
+msgid "View Source Code"
+msgstr "Visualizza Codice Sorgente"
+
+#: includes/class-bwp-syntax.php:680
+msgid "Better WordPress Syntax Plugin"
+msgstr "Better WordPress Syntax Plugin"
+
+#: includes/class-bwp-syntax.php:720
+msgid "Click to toggle codeblock"
+msgstr "Clicca per mostrare il codice"
+
+#: includes/class-bwp-framework.php:172
+#, php-format
+msgid "%s requires WordPress <strong>%s</strong> or higher and PHP <strong>%s</strong> or higher. The plugin will not function until you update your software. Please deactivate this plugin."
+msgstr "%s richiede Wordpress <strong>%s</strong> o maggiore e PHP <strong>%s</strong> o maggiore. Il plugin non funzionerà finchè non aggiorni il tuo software. Per favore disattiva questo plugin nel frattempo."
+
+#: includes/class-bwp-framework.php:181
+msgid "log"
+msgstr "log"
+
+#: includes/class-bwp-framework.php:186
+msgid "You can buy me some coffees if you appreciate my work, thank you!"
+msgstr "Se apprezzi il mio lavoro puoi comprarmi del caffè! Grazie :)"
+
+#: includes/class-bwp-framework.php:212
+#, php-format
+msgid "You are using version %s!"
+msgstr "Stai usando la versione %s!"
+
+#: includes/class-bwp-framework.php:344
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: includes/bwp-option-page/includes/class-bwp-option-page.php:80
+msgid "Plugin Configurations"
+msgstr "Configurazione Plugin"
+
+#: includes/bwp-option-page/includes/class-bwp-option-page.php:398
+msgid "Save Changes"
+msgstr "Salva Cambiamenti"
+
+#: includes/bwp-buttons/bwp-syntax-window.php:14
+msgid "Sorry, but you do not have the permission to view this file."
+msgstr "Sono spiacente ma non hai i permessi per visualizzare questo file."
+
+#: includes/bwp-buttons/bwp-syntax-window.php:148
+msgid "Code"
+msgstr "Codice"
+
+#: includes/bwp-buttons/bwp-syntax-window.php:154
+msgid "Language"
+msgstr "Linguaggio"
+
+#: includes/bwp-buttons/bwp-syntax-window.php:178
+msgid "Type"
+msgstr "Tipo"
+
+#: includes/bwp-buttons/bwp-syntax-window.php:187
+msgid "Inline"
+msgstr "In linea"
+
+#: includes/bwp-buttons/bwp-syntax-window.php:190
+msgid "Select an inline mode"
+msgstr "Selezione una modalità in linea"
+

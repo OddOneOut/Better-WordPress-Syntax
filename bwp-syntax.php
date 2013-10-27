@@ -3,7 +3,7 @@
 Plugin Name: Better WordPress Syntax
 Plugin URI: http://betterwp.net/wordpress-plugins/bwp-syntax/
 Description: This plugin allows you to highlight code syntax in your posts. It is simple, lightweight, and very easy to use with plenty of options to choose. This plugin works with both editors and won't mangle your code format. This plugin utilizes the popular PHP syntax highlighting library - <a href="http://qbnz.com/highlighter/">GeSHi</a>. Some Icons by <a href="http://p.yusukekamiyamane.com/">Yusuke Kamiyamane</a>.
-Version: 1.0.4
+Version: 1.0.6
 Text Domain: bwp-syntax
 Domain Path: /languages/
 Author: Khang Minh
@@ -22,19 +22,21 @@ function bwp_syntax_init()
 {
 	global $bwp_syntax;
 	$bwp_syntax->init();
+	$bwp_syntax->enqueue_media();
 }
 
 function bwp_syntax_init_admin()
 {
 	global $bwp_syntax;
 	$bwp_syntax->init_admin();
+	$bwp_syntax->enqueue_media();
 }
 
 function bwp_syntax_add_shortcode()
 {
 	global $bwp_syntax;
 
-	require_once('includes/class-bwp-syntax.php');
+	require_once(dirname(__FILE__) . '/includes/class-bwp-syntax.php');
 	// Use this filter to add more languages
 	$args = apply_filters('bwp_syntax_languages', array());	
 	$bwp_syntax = new BWP_SYNTAX($args);
@@ -44,4 +46,3 @@ function bwp_syntax_add_shortcode()
 	if ($db_options && 'yes' == $db_options['enable_shortcode'])
 		add_filter('the_content', array($bwp_syntax, 'add_shortcode'), 12);
 }
-?>

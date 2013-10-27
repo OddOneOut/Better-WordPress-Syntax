@@ -1,5 +1,14 @@
 <?php
-require_once(dirname(dirname(dirname(dirname(dirname(dirname(__FILE__)))))) . '/wp-load.php');
+$test_path = dirname(dirname(dirname(dirname(dirname(dirname(__FILE__))))));
+if (file_exists($test_path . '/wp-load.php'))
+	require_once($test_path . '/wp-load.php');
+else if (file_exists(dirname($test_path) . '/wp-load.php'))
+	require_once(dirname($test_path) . '/wp-load.php');
+else
+{
+	echo 'Could not initialize WordPress environment (wp-config.php is missing).';
+	exit;
+}
 // check for rights
 if (!is_user_logged_in() || !current_user_can('edit_posts'))
 	wp_die(__("Sorry, but you do not have the permission to view this file."));

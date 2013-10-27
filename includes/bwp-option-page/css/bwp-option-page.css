@@ -11,8 +11,9 @@
 	zoom: 1;
 }
 
-.bwp-option-page li.clear, .bwp-option-page div.clear {
+.bwp-option-page li.bwp-clear, .bwp-option-page div.bwp-clear {
 	clear: left;
+	display: block;
 	margin: 1em 0 0 0;
 	zoom: 1;
 }
@@ -29,7 +30,7 @@
 }
 
 .bwp-option-page-tabs a {
-	font-size: 21px;
+	font-size: 19px;
 }
 
 .bwp-option-page-tabs a.version {
@@ -83,16 +84,32 @@ p.bwp-option-page-inputs {
 	width: 36px;
 }
 
-#bwp-donation {
+#bwp-info-place {
 	float: right;
-	width: 220px;
-	padding: 7px; padding-bottom: 0px; margin: 0 0 10px 10px;
+	margin: 0 0 10px 10px;
+}
+
+#bwp-donation, #bwp-contact, #bwp-ads {
+	width: 255px;
+	padding: 7px; padding-bottom: 0px;
 	background-color: #ffffff;
 	border: 1px solid #cccccc;
 	text-align: center;
 }
 
-#bwp-donation small {
+#bwp-donation p, #bwp-ads p {
+	margin: 0.5em 0 1em 0;
+}
+
+#bwp-ads {
+	padding-bottom: 5px;
+}
+
+#bwp-ads p {
+	text-decoration: underline;
+}
+
+#bwp-info-place small {
 	font-size: 0.8em;
 }
 
@@ -101,4 +118,28 @@ p.bwp-option-page-inputs {
 	display: inline-block;
 	margin: 0 0 1px 2px;
 	padding: 0px;
+}
+
+.bwp-separator {
+	width: 271px;
+}
+
+#bwp-contact  {
+	text-align: left;
+	padding: 7px;
+}
+
+#bwp-contact a {
+	display: block;
+	height: 20px;
+	font-size: 0.8em;
+	padding-left: 25px;
+}
+
+#bwp-contact .bwp-rss {
+	background: transparent url("../images/icon-rss.png") no-repeat left center;
+}
+
+#bwp-contact .bwp-twitter {
+	background: transparent url("../images/icon-twitter.png") no-repeat left center;
 }

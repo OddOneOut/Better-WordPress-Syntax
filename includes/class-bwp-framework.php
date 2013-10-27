@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2011 Khang Minh <betterwp.net>
+ * Copyright (c) 2012 Khang Minh <betterwp.net>
  * @license http://www.gnu.org/licenses/gpl.html GNU GENERAL PUBLIC LICENSE VERSION 3.0 OR LATER
  */
  
@@ -90,9 +90,15 @@ class BWP_FRAMEWORK {
 
 	/**
 	 * Other things
-	 */	
+	 */
 	var $wp_ver = '2.8';
 	var $php_ver = '5';
+
+	/**
+	 * Other special variables
+	 */
+	protected $_menu_under_settings = false;
+	protected $_simple_menu = false;
 
 	/**
 	 * Build base properties
@@ -174,37 +180,80 @@ class BWP_FRAMEWORK {
 
 	function show_donation()
 	{
-		$showable = apply_filters('bwp_donation_showable', true);		
+		$showable = apply_filters('bwp_donation_showable', true);
+		$ad_showable = apply_filters('bwp_ad_showable', true);
 ?>
-<div id="bwp-donation">
-<a href="<?php echo $this->plugin_url; ?>"><?php echo $this->plugin_title; ?></a>
-<small>(<a href="<?php echo str_replace('/wordpress-plugins/', '/topic/', $this->plugin_url); ?>"><?php _e('log', $this->plugin_dkey); ?></a>)</small><br />
+<div id="bwp-info-place">
+<div id="bwp-donation" style="margin-bottom: 0px;">
+<a href="<?php echo $this->plugin_url; ?>"><?php echo $this->plugin_title; ?></a> <small>v<?php echo $this->plugin_ver; ?></small><br />
+<small>
+	<a href="<?php echo str_replace('/wordpress-plugins/', '/topic/', $this->plugin_url); ?>"><?php _e('Development Log', $this->plugin_dkey); ?></a> &ndash; <a href="<?php echo $this->plugin_url . 'faq/'; ?>" title="<?php _e('Frequently Asked Questions', $this->plugin_dkey) ?>"><?php _e('FAQ', $this->plugin_dkey); ?></a> &ndash; <a href="http://betterwp.net/contact/" title="<?php _e('Got a problem? Send me a feedback!', $this->plugin_dkey) ?>"><?php _e('Contact', $this->plugin_dkey); ?></a>
+</small>
+<br />
 <?php
 		if (true == $showable || ($this->is_multisite() && is_super_admin()))
 		{
 ?>
-<small><?php _e('You can buy me some coffees if you appreciate my work, thank you!', $this->plugin_dkey); ?></small>
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<small><?php _e('You can buy me some special coffees if you appreciate my work, thank you!', $this->plugin_dkey); ?></small>
+<form class="paypal-form" action="https://www.paypal.com/cgi-bin/webscr" method="post">
 <p>
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="B65WHYLRWWCGE">
-<select name="os0" style="margin: 0px;">
-	<option value="One cup">One cup $10.00</option>
-	<option value="Two cups">Two cups $20.00</option>
-	<option value="Five cups!">Five cups! $50.00</option>
-</select>
-<input class="paypal-submit" type="image" src="http://betterwp.net/images/icon-paypal.gif" border="0" name="submit" alt="Via PayPal!">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="NWBB8JUDW5VSY">
+<input type="hidden" name="lc" value="VN">
+<input type="hidden" name="button_subtype" value="services">
+<input type="hidden" name="no_note" value="0">
+<input type="hidden" name="cn" value="Would you like to say anything to me?">
+<input type="hidden" name="no_shipping" value="1">
+<input type="hidden" name="rm" value="1">
+<input type="hidden" name="return" value="http://betterwp.net">
 <input type="hidden" name="currency_code" value="USD">
-<img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-640-20110306-1/en_US/i/scr/pixel.gif" width="1" height="1">
+<input type="hidden" name="bn" value="PP-BuyNowBF:icon-paypal.gif:NonHosted">
+<input type="hidden" name="item_name" value="<?php echo __('Donate to ' . $this->plugin_title, $this->plugin_dkey); ?>" />
+<select name="amount">
+	<option value="5.00"><?php _e('One cup $5.00', $this->plugin_dkey); ?></option>
+	<option value="10.00"><?php _e('Two cups $10.00', $this->plugin_dkey); ?></option>
+	<option value="25.00"><?php _e('Five cups! $25.00', $this->plugin_dkey); ?></option>
+	<option value="50.00"><?php _e('One LL-cup!!! $50.00', $this->plugin_dkey); ?></option>
+	<option value="100.00"><?php _e('... or any amount!', $this->plugin_dkey); ?></option>
+</select>
+<span class="paypal-alternate-input" style="display: none;"><!-- --></span>
+<input class="paypal-submit" type="image" src="<?php echo plugin_dir_url($this->plugin_file) . 'includes/bwp-option-page/images/icon-paypal.gif'; ?>" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </p>
 </form>
 <?php
 		}
 ?>
 </div>
+<div class="bwp-separator">
+	<div style="height: 10px; width: 5px; background-color: #cccccc; margin: 0 auto;"><!-- --></div>
+</div>
+<div id="bwp-contact">
+	<a class="bwp-rss" href="http://feeds.feedburner.com/BetterWPnet"><?php _e('Latest updates from BetterWP.net!', $this->plugin_dkey); ?></a>
+	<a class="bwp-twitter" href="http://twitter.com/0dd0ne0ut"><?php _e('Follow me on Twitter!', $this->plugin_dkey); ?></a>
+</div>
+<?php
+		if (true == $ad_showable) 
+		{
+?>
+<div class="bwp-separator">
+	<div style="height: 10px; width: 5px; background-color: #cccccc; margin: 0 auto;"><!-- --></div>
+</div>
+<div id="bwp-ads">
+	<p><strong><?php _e('This Plugin is Proudly Sponsored By', $this->plugin_dkey); ?></strong></p>
+	<div style="width: 250px; margin: 0 auto;">
+		<a href="http://managewp.com/?utm_source=<?php echo $this->plugin_key; ?>&amp;utm_medium=Banner&amp;utm_content=mwp250_2&amp;utm_campaign=Plugins">
+			<img src="<?php echo plugin_dir_url($this->plugin_file) . 'includes/bwp-option-page/images/ad_250x250.png'; ?>" />
+		</a>
+	</div>
+</div>
+<?php
+		}
+?>
+</div>
 <?php
 	}
-	
+
 	function show_version()
 	{
 		if (empty($this->plugin_ver)) return '';
@@ -215,8 +264,6 @@ class BWP_FRAMEWORK {
 	{
 		// Build constants
 		$this->build_constants();
-		// Build tabs
-		$this->build_tabs();
 		// Build options
 		$this->build_options();
 		// Load libraries
@@ -224,7 +271,7 @@ class BWP_FRAMEWORK {
 		// Add actions and filters		
 		$this->add_hooks();
 		// Enqueue needed media, conditionally
-		$this->enqueue_media();
+		add_action('init', array($this, 'enqueue_media'));
 		// Load other properties
 		$this->init_properties();
 		// Loaded everything for this plugin, now you can add other things to it, such as stylesheet, etc.
@@ -285,16 +332,21 @@ class BWP_FRAMEWORK {
 			$db_option = get_option($option);
 			if ($db_option && is_array($db_option))
 				$options = array_merge($options, $db_option);
-			// Also check for global options
-			$db_option = get_site_option($option);
-			if ($db_option && is_array($db_option))
+			unset($db_option);
+			// Also check for global options if in Multi-site
+			if ($this->is_multisite())
 			{
-				foreach ($db_option as $key => $option)
+				$db_option = get_site_option($option);
+				if ($db_option && is_array($db_option))
 				{
-					if (in_array($key, $this->site_options))
-						$this->site_options[$key] = $option;
+					$temp = array();
+					foreach ($db_option as $k => $o)
+					{
+						if (in_array($k, $this->site_options))
+							$temp[$k] = $o;
+					}
+					$options = array_merge($options, $temp);
 				}
-				$options = array_merge($options, $this->site_options);
 			}
 		}
 		$this->options = $options;
@@ -338,25 +390,32 @@ class BWP_FRAMEWORK {
 
 	function plugin_action_links($links, $file) 
 	{
+		$option_script = (!$this->_menu_under_settings && !$this->_simple_menu) ? 'admin.php' : 'options-general.php';
 		$option_keys = array_values($this->option_keys);
 		if ($file == plugin_basename($this->plugin_file))
-			$links[] = '<a href="admin.php?page=' . $option_keys[0] . '">' . __('Settings') . '</a>';
+			$links[] = '<a href="' . $option_script . '?page=' . $option_keys[0] . '">' . __('Settings') . '</a>';
 
 		return $links;
 	}
 
 	function init_admin()
 	{
+		$this->_menu_under_settings = apply_filters('bwp_menus_under_settings', false);
+
 		add_filter('plugin_action_links', array($this, 'plugin_action_links'), 10, 2);
 
 		if ($this->is_admin_page())
 		{
+			// Build tabs
+			$this->build_tabs();
 			// Load option page builder
 			if (!class_exists('BWP_OPTION_PAGE'))
 				require_once(dirname(__FILE__) . '/bwp-option-page/bwp-option-page.php');
-			// Enqueue style for the option page
-			wp_enqueue_style('bwp-option-page',  plugin_dir_url($this->plugin_file) . 'includes/bwp-option-page/css/bwp-option-page.css');
+			// Enqueue style sheets and scripts for the option page
+			wp_enqueue_style('bwp-option-page',  plugin_dir_url($this->plugin_file) . 'includes/bwp-option-page/css/bwp-option-page.css', array(), '1.0.1');
+			wp_enqueue_script('bwp-paypal-js',  plugin_dir_url($this->plugin_file) . 'includes/bwp-option-page/js/paypal.js', array('jquery'));
 		}
+
 		$this->build_menus();
 	}
 
@@ -370,10 +429,11 @@ class BWP_FRAMEWORK {
 	
 	function build_tabs()
 	{
+		$option_script = (!$this->_menu_under_settings) ? 'admin.php' : 'options-general.php';
 		foreach ($this->option_pages as $key => $page)
 		{
 			$pagelink = (!empty($this->option_keys[$key])) ? $this->option_keys[$key] : $this->extra_option_keys[$key];
-			$this->form_tabs[$page] = get_option('siteurl') . '/wp-admin/admin.php?page=' . $pagelink;
+			$this->form_tabs[$page] = get_option('siteurl') . '/wp-admin/' . $option_script . '?page=' . $pagelink;
 		}
 	}
 
